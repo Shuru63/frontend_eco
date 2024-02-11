@@ -1,10 +1,9 @@
-import { ConfigureStoreonfigureStore } from "@reduxjs/toolkit";
-import { CaseReducerWithPrepare } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit';
+import rootReducers from './reducer';
 
-export const store =ConfigureStoreonfigureStore({
-    reducer:{
-        CaseReducerWithPrepare,
-    },
+const store = configureStore({
+  reducer: rootReducers,
+  
 });
-export type RootState = ReturnType <typeof store.getState>
-export type appDispatch = typeof store.dispatch;
+
+export default store;
