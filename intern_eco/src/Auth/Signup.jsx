@@ -2,13 +2,6 @@ import React from 'react';
 import Login from './Login';
 import { useState } from 'react';
 import Loader from '../Loder';
-import {
-    CModal,
-    CModalTitle,
-    CModalBody,
-    CModalFooter,
-    CButton,
-  } from '@coreui/react';
 
 const Signup = () => {
     const [name, setName] = useState('');
@@ -47,6 +40,7 @@ const Signup = () => {
     };
 
     return (
+        
         <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
             {log ? (
                 <div className="flex min-h-full flex-col justify-center px-3 py-6 lg:px-8 ">
@@ -130,26 +124,9 @@ const Signup = () => {
                 </div>
             ) : (
                 <Login />
+                
             )}
-            <div className="loader">
-                {showLoader && <Loader></Loader>}
-            </div>
-
-            <CModal
-                visible={visible}
-                onClose={() => setVisible(false)}
-                aria-labelledby="LiveDemoExampleLabel"
-            >
-                <CModalTitle id="LiveDemoExampleLabel">Alert</CModalTitle>
-                <CModalBody>
-                    <p>{message}</p>
-                </CModalBody>
-                <CModalFooter>
-                    <CButton color="secondary" onClick={() => setVisible(false)}>
-                        Close
-                    </CButton>
-                </CModalFooter>
-            </CModal>
+         
         </div>
     );
 };

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'; // Correct import statement for useSe
 const Navbar = () => {
   const state = useSelector((state) => state.handleCart);
   console.log(state.length)
-  console.log("sdafghj,k.")
+
   return (
     <div>
       <nav className="bg-white-800 border-2" >
@@ -21,16 +21,17 @@ const Navbar = () => {
                 <div className="flex space-x-4">
 
                   <NavLink to='/content' className="text-lg text-white-00 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home </NavLink>
-                  <NavLink to='/product' className=" text-lg text-white-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Product</NavLink>
-                  <NavLink to='/' className=" text-lg text-white-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</NavLink>
+                  <NavLink to='/content' className=" text-lg text-white-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Product</NavLink>
+                  <NavLink to='/About' className=" text-lg text-white-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</NavLink>
                   <NavLink to='/contact' className="text-lg text-white-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</NavLink>
                 </div>
               </div>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <div className="relative ml-3">
-                <div>
-                  <NavLink to ="/cart"class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium border-2 border-gray" aria-current="page">Cart({state.length})</NavLink>
+                <div><NavLink to ="/"className="mr-2 bg-gray-700 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 mt-auto  inline-block max-w-content mt-4" aria-current="page">
+                  log in</NavLink>
+                  <NavLink to ="/cart"className="bg-gray-700 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 mt-auto  inline-block max-w-content mt-4"  aria-current="page">Cart({state.length})</NavLink>
                 </div>
               </div>
             </div>
@@ -42,7 +43,7 @@ const Navbar = () => {
 
             <NavLink to='/content' className="text-white-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</NavLink>
             <NavLink to='/product' className="text-white-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Product</NavLink>
-            <NavLink to='/' className="text-white-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Abouts</NavLink>
+            <NavLink to='/About' className="text-white-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Abouts</NavLink>
             <NavLink to='/contact' className="text-white-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</NavLink>
           </div>
         </div>

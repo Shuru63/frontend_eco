@@ -1,8 +1,16 @@
 import React from 'react'
+import Loader from '../Loder';
 import { useState } from 'react';
 const Contact = () => {
-    const [loading, setLoading] = useState(true);
-    return (
+  const [loading, setLoading] = useState(true);
+  setTimeout(() => {
+    setLoading(false);
+}, 2000);
+  return (
+    <div>
+      {loading ? (
+        <Loader />
+      ) : (
         <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div
           className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -128,14 +136,16 @@ const Contact = () => {
           <div className="mt-10">
             <button
               type="submit"
-              className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="rounded-full bg-blue-700 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 mt-auto  inline-block max-w-content mt-4"
             >
               Let's talk
             </button>
           </div>
         </form>
         </div>
-    )
+    )}
+    </div>
+  )
 }
 
 export default Contact

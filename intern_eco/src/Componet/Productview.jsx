@@ -75,7 +75,7 @@ const addProduct = (product)=>{
               onClick={() =>addProduct(product)}>
                 Add to Cart
               </button>
-              < NavLink className=" bg-gray-400 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 mt-auto inline-block max-w-content">
+              < NavLink to="/cart" className=" bg-gray-400 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 mt-auto inline-block max-w-content">
                 Go to Cart
               </NavLink>
             </div>
