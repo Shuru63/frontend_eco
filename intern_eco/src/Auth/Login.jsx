@@ -1,13 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Homepage from '../Componet/Navbar'
-import {
-    CModal,
-    CModalTitle,
-    CModalBody,
-    CModalFooter,
-    CButton,
-} from '@coreui/react';
+import { NavLink } from 'react-router-dom';
 import Loader from '../Loder';
 import Signup from './Signup';
 const Login = () => {
@@ -56,21 +50,7 @@ const Login = () => {
                             showLoader && <Loader></Loader>
                         }
                     </div>
-                    <CModal
-                        visible={visible}
-                        onClose={() => setVisible(false)}
-                        aria-labelledby="LiveDemoExampleLabel"
-                    >
-                        <CModalTitle id="LiveDemoExampleLabel">Alert</CModalTitle>
-                        <CModalBody>
-                            <p>{message}</p>
-                        </CModalBody>
-                        <CModalFooter>
-                            <CButton color="secondary" onClick={() => setVisible(false)}>
-                                Close
-                            </CButton>
-                        </CModalFooter>
-                    </CModal>
+                  
                     <div className="mb-4 text-center">
                         <h1 className="text-2xl font-bold">Log in</h1>
                     </div>
@@ -95,7 +75,13 @@ const Login = () => {
                             <div><button type="submit" value="submit"
                                 className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Submit</button></div>
                             
-                          
+                            <p className="text-center">
+                         registered?{' '}
+                        <NavLink className="text-blue-500 cursor-pointer" to="/signup">
+                            sign up
+                        </NavLink>{' '}
+                        ?
+                    </p>
                         </form>
                     </div>
                 </div>
