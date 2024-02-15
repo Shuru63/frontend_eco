@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Loader from '../Loder';
 import {useDispatch} from 'react-redux';
-import { addCart } from '../redux/redux';
+// import { addCart } from '../redux/redux';
 import { NavLink } from 'react-router-dom';
 
 const Productview = () => {
@@ -13,7 +13,7 @@ const Productview = () => {
 
 const dispatch = useDispatch();
 const addProduct = (product)=>{
-    dispatch(addCart(product));
+    // dispatch(addCart(product));
 }
 
   useEffect(() => {
