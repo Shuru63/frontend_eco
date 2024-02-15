@@ -6,12 +6,14 @@ const initialProductState={
     success:"",
     loading:"",
 }
+
  const productReducer=(state=initialProductState,action) =>{
     switch(action.type){
         case FETCH_PRODUCTS_REQUEST :
             return{...state , _loading:true}
 
         case FETCH_PRODUCTS_SUCCESS :
+            localStorage.getItem(products)
             return{...state,product:action.payload,loading:false,success:"prodct fetch successfully"}
 
         case FETCH_PRODUCTS_FAIL :
