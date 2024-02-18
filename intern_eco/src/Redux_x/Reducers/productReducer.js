@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS_REQUEST, FETCH_PRODUCTS_SUCCESS } from "../Action/productAction"
+import { FETCH_PRODUCTS_REQUEST, FETCH_PRODUCTS_SUCCESS,FETCH_PRODUCTS_FAIL } from "../Action/productAction"
 
 const initialProductState={
     products:[],
@@ -14,7 +14,11 @@ const initialProductState={
 
         case FETCH_PRODUCTS_SUCCESS :
             localStorage.getItem(products)
-            return{...state,product:action.payload,loading:false,success:"prodct fetch successfully"}
+            return{...state,
+                product:action.payload,
+                loading:false,
+                success:"prodct fetch successfully"
+            }
 
         case FETCH_PRODUCTS_FAIL :
                 return{...state,error:action.payload,_loading:false,}
